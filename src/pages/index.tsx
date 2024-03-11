@@ -7,7 +7,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import zrr from "@/components/jsons/zones-de-revitalisation-rurale-zrr.json";
 import { GeoJSONProps } from "react-leaflet";
 import { Checkbox } from "@/components/ui/checkbox";
-const DEFAULT_CENTER = [46.228245, 2.1895145];
+const DEFAULT_CENTER = [44, 2];
 
 export default function HomePage() {
   const ZRR = zrr as GeoJSONProps["data"];
@@ -31,7 +31,7 @@ export default function HomePage() {
           width={width}
           height={height}
           center={DEFAULT_CENTER}
-          zoom={6}
+          zoom={8}
         >
           {/*//@ts-expect-error flemme d'ajouter les types*/}
           {({ TileLayer, Marker, Popup, GeoJSON }) => (
@@ -45,12 +45,7 @@ export default function HomePage() {
                   <Popup>{ville.cc}</Popup>
                 </Marker>
               ))}
-              {displayZRR && (
-                <GeoJSON
-                  attribution="&copy; credits due..."
-                  data={ZRR}
-                ></GeoJSON>
-              )}
+              {displayZRR && <GeoJSON data={ZRR}></GeoJSON>}
             </>
           )}
         </Map>
