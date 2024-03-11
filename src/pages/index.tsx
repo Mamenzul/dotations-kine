@@ -51,7 +51,7 @@ export default function HomePage() {
         </Map>
         <div className="absolute left-0 top-0 z-10 w-full p-4 pl-20">
           <RadioGroup
-            className=" flex h-fit flex-col items-end justify-between pb-2 md:flex-row"
+            className=" flex h-fit flex-col items-end justify-center pb-2 md:flex-row"
             defaultValue="1"
             onValueChange={(e) => setId(e)}
           >
@@ -63,17 +63,9 @@ export default function HomePage() {
               <RadioGroupItem value="2" id="2" />
               <Label htmlFor="2">Zone sous dotée</Label>
             </div>
-            <div className="flex items-center space-x-2 rounded-full bg-white p-2">
-              <RadioGroupItem value="4" id="4" />
-              <Label htmlFor="4">Zone sur dotée</Label>
-            </div>
-            <div className="flex items-center space-x-2 rounded-full bg-white p-2">
-              <RadioGroupItem value="5" id="5" />
-              <Label htmlFor="5">Zone très sur dotée</Label>
-            </div>
           </RadioGroup>
-          <div className="flex h-fit flex-col items-end ">
-            <div className="flex  items-end space-x-2 rounded-full bg-white p-2">
+          <div className="flex h-fit flex-col items-end justify-center md:flex-row ">
+            <div className="flex  items-end  space-x-2 rounded-full bg-white p-2 ">
               <Checkbox
                 id="zrr"
                 onCheckedChange={(e: boolean) => setDisplayZRR(e)}
