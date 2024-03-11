@@ -6,7 +6,7 @@ export function Header() {
       <div className="container flex items-center justify-center">
         <Link href="/">
           <h1 className="font-header flex pl-3 pr-3 text-xl  font-semibold md:text-xl ">
-            DOTATIONS KINE
+            DOTATIONS KINE OCCITANIE
           </h1>
         </Link>
       </div>
